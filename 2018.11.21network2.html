@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>p5.jsことはじめ</title>
+    <link rel="stylesheet" href="stile1.css">
+
+    <style media="screen">
+    .main-container{
+      background-image: url(image/background-network1.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: top;30px;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+    </style>
+  </head>
+
+
+
+  <body>
+
+    <header>
+      <div class="header-container">
+
+      </div>
+    </header>
+
+
+
+    <nav>
+      <div class="nav-container">
+        <ul>
+          <li class="top"><a href="index.html">top page-トップページ</a></li>
+          <li><a href="network1.html">network1-ソフトウェア・ネットワーク演習</a></li>
+          <li><a href="material1.html">material1-素材・材料学演習</a></li>
+          <li><a href="etc.html" class="current">etc-その他レポート等</a></li>
+          <li class="students"><a href="https://shira-ko.github.io/students2018/index.html">students-在学生一覧</a></li>
+        </ul>
+      </div>
+    </nav>
+
+
+
+    <main>
+      <div class="main-container">
+
+        <div class="sidebar">
+          <ul>
+            <li><a href="#a">傘持ち</a></li>
+            <li><a href="#b">j5.js</a></li>
+            <li><a href="#c">月奴</a></li>
+            <li><a href="#d">まとめ</a></li>
+            <li><a href="#e">リンク集</a></li>
+          </ul>
+        </div>
+
+
+
+        <div class="sidebar2">
+          <iframe src="x-tech.html" width="260" height="650"></iframe>
+        </div>
+
+
+
+        <div class="maincontents">
+
+          <h3 id="a">傘持ち</h3>
+
+          <p class="lead">
+            突然だが、自分は傘がそこまで大好きという訳ではない。
+            <br>
+            そんなまさかって？？いやいや、本当にそうなのだ。
+            <br>
+            最近熱中出来る物が無くて、時間が遅々として進まない。そこで何かに打ち込みたいと思い立ち、思いついたように「少し気に入ってる」程度の物を追求している。
+            もしかしたら熱中出来るような何かがあるかもしれないと、一縷の望みを賭けて。
+            <br>
+            傘も、そんな言ってしまえば『暇つぶし』のうちの一つだ。
+          </p>
+
+          <p>
+            まぁ、嫌いという訳ではないし、それなりには気に入ってるのは確かだ。
+            <br>
+            追求を続ければ、知識も増えるし愛着も湧く。
+            <br>
+            授業課題で『何か作れ』と無茶振りされた時に、選べるものがあるのは心強い。
+            <br>
+            <iframe src="https://www.openprocessing.org/sketch/630824/embed/" width="600" height="600"></iframe>
+            <br>
+            『月奴』という模様で、つきやっこと読む。冷奴では無い、月奴だ。
+            <br>
+            そういえば「冷奴と書いて『cool guy』、『イケてるヤツ』って意味なんだろ？？」と発言した外国人の話を思い出した。
+            <br>
+            その理論で言えば、月奴は『イカれたヤツ』だろうか。『lunatic guy』…ちなみにルナティックに良い意味は無い。
+          </p>
+
+          <p>
+            そんなイカれたヤツこと月奴だが、端材が出ないように、↑画像で言うと「赤い丸」と「白い月」で新たな月奴を作るという。
+            月奴の和傘を見かけたら、どこかに片割れが居るのかな…などと思いを馳せてみてはどうだろうか。
+          </p>
+
+          <hr>
+
+          <h3 id="b">p5js</h3>
+
+          <p>
+            で。
+            <br>
+            授業課題。<a href="https://p5js.org">p5.js</a>を習った。
+            <br>
+            アーティストに愛用されており、プログラミングの触り始めに適している…と、x-techの生徒との親和性は高い…と思ってたけどやっぱりアイツら来ねぇ。
+            <br>
+            いやまぁ、難しかったけど。基本と言うか基礎の部分だし、これから触れていく、基礎の上に積み上がる部分のことを考えると大分大事な授業だと思ったのだが…。
+            <br>
+            まぁ、何か考えはあるのだろうし、置いておくとして。授業内容に触れて行こう。
+          </p>
+          <p>
+            基本構造はfanction setup(){}とfanction draw(){}。
+            <br>
+            setupの{}内が最初に一度だけ実行される内容で、drawの{}内がその後に繰り返し実行される内容。
+            <br>
+            イチゴジャムで
+            <br>
+            1
+            <br>
+            2
+            <br>
+            3
+            <br>
+            4
+            <br>
+            5
+            <br>
+            とか書いて、5の所に
+            <br>
+            5  goto'3'
+            <br>
+            とか書いたのを思い出した。
+            <br>
+            アレで言うと、1と2がfanction setupで3,4,5がfanction draw、だろうか。
+          </p>
+          <p>
+            色指定は初期設定で数値が3つ並んでいるとrgbで、一つの時は白黒。例えば背景色を指定するときは
+            <br>
+            background（赤の値, 緑の値, 青の値）;
+            <br>
+            と書く。
+            <br>
+            モノクロの場合は
+            <br>
+            background(白の値);
+            <br>
+            こんな感じ。
+          </p>
+          <p>
+            数値は0~255で、rgbが(255, 0, 0)なら赤、(255, 255, 255)なら白、(0, 0, 0)なら黒。そして(255, 255, 0)なら黄色…ん？？←詳しくは光の三原色で検索。
+            <br>
+            モノクロの方は（0）なら黒、(255)なら白。
+            <br>
+            ちなみに、なんで上限が255なんて中途半端な数値かと言うと多分0~255で全256、2の累乗の為だと思われる。
+          </p>
+          <p>
+            座標指定は初期設定で左上を基準点0,0とする。
+            <br>
+            基準点は変更出来て、fanction setupの{}の中にでも
+            <br>
+            translate(width/2, height/2);
+            <br>
+            と書けばキャンバスの中心が基準点となる。
+          </p>
+          <p>
+            描ける図形は
+            <br>
+            楕円
+            <br>
+            ellipse(中心点のx座標, 中心点のy座標, 楕円の横幅、楕円の縦幅);  //幅と高さを合わせれば円になる
+            <br>
+            円
+            <br>
+            ellipse(中心点のx座標, 中心点のy座標, 円の直径);
+            <br>
+            三角形
+            <br>
+            triangle(点1のx座標, 点1のy座標, 点2のx座標, 点2のy座標, 点3のx座標, 点3のy座標);
+            <br>
+            長方形
+            <br>
+            rect(始点のx座標, 始点のy座標, 長方形の幅, 長方形の高さ);
+            <br>
+            線
+            <br>
+            line(始点のx座標, 始点のy座標, 終点のx座標, 終点のy座標);
+            <br>
+            円弧
+            <br>
+            arc(円の中心点x座標, 円の中心点y座標, 円の横幅, 円の縦幅, radians(＜角度1＞), radians(＜角度2＞), OPEN);  //＜角度＞は円の右を0として、
+            360まで指定可能（角度が一周360°のため）。角度1と角度2が0と360なら◯が、45と315ならcが出来る。なお、最後のOPENをPIEにするとピザみたいなのが出来る。
+          </p>
+
+          <p>
+            図形の枠線はstrokeで、
+            <br>
+            stroke(赤の値, 緑の値, 青の値);
+            <br>
+            stroke(白の値);
+            <br>
+            strokeWeight(線の幅);
+            <br>
+            noStroke(); //線なんて要らねぇ、って時に。（）の中は空っぽでok。
+          </p>
+          <p>
+            乱数を扱いたい場合はrandomとnoiseがある。違いについては↓画像を見たら感覚的に分かってくれるはず
+            <br>
+            <img src="https://infosmith.biz/wp-content/uploads/noise-dot.png" alt="">
+            <br>
+            詳しい説明は
+            <a href="https://infosmith.biz/blog/it/p5js-noise">こちら</a>を参照
+          </p>
+
+          <p>
+            さっきから使ってる//はコメントアウト。説明文を色々書ける。絶対書いたほうがいい。だって、後になると自分が書いたコードが何を意味してんのか分からなくなるから。
+            <br>
+            ...いや、マジで。
+            <br>
+            使い方は簡単で
+            <br>
+            //ここに色々書けるよ
+            <br>
+            こんな感じ。複数行に渡る時は
+            <br>
+            /*
+            <br>
+            ここに書けるよ
+            <br>
+            ずっと書けるよ
+            <br>
+            */
+            <br>
+            こんな感じ。
+          </p>
+          <p>
+            後、大前提として配置した図形は記述した順に重ねられるので、後に描いた図形が上に重なる。
+            <br>
+            フォトショのレイヤーのようなものと言えば分かりやすいか。
+          </p>
+
+         <hr>
+
+         <h3 id="c">月奴</h3>
+
+         <p>
+           月奴の作り方の解説に入ろう。
+           <br>
+           傘布・傘骨・頭紙の三パーツで構成されている。
+           <br>
+           傘布は簡単で、ellipseを使って濃い赤の円、それより少し小さい赤円、中心をずらした白円の三つで構成されている。
+         </p>
+         <p>
+           傘骨の方は面倒だ。
+           <br>
+           線の長さと太さ、そして角度を指定するのだが。
+           <br>
+           長さや太さはともかく角度とは何かと言うと、指定した角度に沿って線分を360°配置する、と言うものだ。
+           <br>
+           性質から360の約数でないと歪な配置となってしまう。
+           <br>
+           今回は角度7.5度を指定して、三角関数を使って算出した。
+           <br>
+           線の長さと太さを指定して、最後に実際に線を引かせる。
+         </p>
+
+         <p>
+           頭紙は四角形5個をサイコロの5の目のように配置。
+           <br>
+           その下に風車状の扇四つを配置して、少し濃ゆい色の枠線を付ける。
+           <br>
+           一番上に円を配置して、完成。
+           <br>
+           外周の色変更でいい立体感が出せたと思う。
+         </p>
+
+         <hr>
+
+         <h3 id="d">まとめ</h3>
+
+         <p>
+           白状すると、傘骨部分はどーしても実現出来なかったのでコピペした。数値やらなんやらは弄ったが。
+           <br>
+           プログラムと言うものの難解さの一端に触れた、そんな授業だった。
+         </p>
+
+         <hr>
+
+         <h3 id="e">リンク集</h3>
+
+         <p>
+           <a href="https://p5js.org">p5js</a>
+           <br>
+           <a href="https://editor.p5js.org">↑のウェブエディタ</a>
+           <br>
+           <a href="https://infosmith.biz/blog/it/p5js-noise">パーリンノイズ</a>
+         </p>
+
+         <hr>
+        </div>
+      </div>
+    </main>
+
+
+
+    <footer>
+      <div class="footer-container">
+        <ol class="breadcrump">
+          <li><a href="about me.html">KAIKI Tsuda</a></li>
+          <li><a href="index.html">top page</a></li>
+          <li><a href="network1.html">etc</a></li>
+          <li>template</li>
+        </ol>
+      </div>
+    </footer>
+
+
+
+
+
+    <script type="text/javascript"src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+    $(function () {
+    var headerHight = 100;
+    $('a[href^=#]').click(function(){
+        var href= $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top-headerHight;
+        $("html, body").animate({scrollTop:position}, 550, "swing");
+        return false;
+      });
+    });
+
+    </script>
+
+  </body>
+
+</html>

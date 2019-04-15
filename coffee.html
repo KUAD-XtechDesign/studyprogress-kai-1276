@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>タイトル</title>
+    <link rel="stylesheet" href="tategaki1.css">
+
+
+    <style media="screen">
+
+    .block{
+      padding: 20px;
+      width: 100% auto;
+      height: auto;
+      display: flex;
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+      justify-content: center;
+    }
+    .block-one {
+      height: 380px;
+      background:#198209 ;
+      z-index: 10;
+    }
+    .block-two {
+      height: 350px;
+      background: #85937A;
+      z-index: 20;
+    }
+    .block-three {
+      background: #586C5D;
+      z-index: 30;
+    }
+    .block-four {
+      background: #A9AF90;
+      z-index: 40;
+    }
+    .block-five {
+      background: #DEDCB8;
+      z-index: 50;
+    }
+</style>
+  </head>
+
+
+
+  <body>
+
+    <header>
+      <div class="header-container">
+
+      </div>
+    </header>
+
+
+
+    <main>
+      <div class="main-container">
+
+        <div class="sidebar">
+          <ul>
+            <li><a href="#a">a題</a></li>
+            <li><a href="#b">b題</a></li>
+            <li><a href="#c">c題</a></li>
+            <li><a href="#d">d題</a></li>
+            <li><a href="#e">e題</a></li>
+            <li><a href="#f">f題</a></li>
+          </ul>
+        </div>
+
+
+
+        <div class="sidebar2">
+
+        </div>
+
+
+
+        <div class="maincontents">
+
+          <div class="block block-one">
+
+            <p>
+              神が認めた合法。
+              <br>
+              ーーー『シャングリラ・フロンティア』より
+            </p>
+          </div>
+
+          <div class="block block-two">
+            <p>
+              縦書きレイアウトに挑戦してみた。ついでにposition:sticky;を使った表現にも。
+              <br>
+              肝心の文章の内容を何も考えていなかったけど、その辺のネット小説とかコピペしても面白くないので作り方についてメモを残そうと思う。
+              
+            </p>
+
+
+          </div>
+          <div class="block block-three">
+            <p>Three</p>
+          </div>
+          <div class="block block-four">
+            <p>Four</p>
+          </div>
+          <div class="block block-five">
+            <p>Five</p>
+          </div>
+
+        </div>
+      </div>
+    </main>
+
+
+
+    <footer>
+      <div class="footer-container">
+        <ol class="breadcrump">
+          <li>4.10.2018</li>
+        </ol>
+      </div>
+    </footer>
+
+
+
+
+
+    <script type="text/javascript"src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+    $(function () {
+    var headerHight = 100;
+    $('a[href^=#]').click(function(){
+        var href= $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top-headerHight;
+        $("html, body").animate({scrollTop:position}, 550, "swing");
+        return false;
+      });
+    });
+
+    </script>
+
+  </body>
+
+</html>

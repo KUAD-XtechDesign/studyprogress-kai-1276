@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>タイトル</title>
+    <link rel="stylesheet" href="stile1.css">
+
+    <style media="screen">
+    .main-container{
+      background-image: url(image/background-1.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: top;30px;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+    </style>
+  </head>
+
+
+
+  <body>
+
+    <header>
+      <div class="header-container">
+
+      </div>
+    </header>
+
+
+
+    <nav>
+      <div class="nav-container">
+        <ul>
+          <li class="top"><a href="index.html">top page-トップページ</a></li>
+          <li><a href="network1.html">network1-ソフトウェア・ネットワーク演習</a></li>
+          <li><a href="material1.html">material1-素材・材料学演習</a></li>
+          <li><a href="etc.html" class="current">etc-その他レポート等</a></li></li>
+          <li class="students"><a href="https://shira-ko.github.io/students2018/index.html">students-在学生一覧</a></li>
+        </ul>
+      </div>
+    </nav>
+
+
+
+    <main>
+      <div class="main-container">
+
+        <div class="sidebar">
+          <ul>
+            <li><a href="#a">a題</a></li>
+            <li><a href="#b">b題</a></li>
+            <li><a href="#c">c題</a></li>
+            <li><a href="#d">d題</a></li>
+            <li><a href="#e">e題</a></li>
+            <li><a href="#f">f題</a></li>
+          </ul>
+        </div>
+
+
+
+        <div class="sidebar2">
+          <iframe src="x-tech.html" width="260" height="650"></iframe>
+        </div>
+
+
+
+        <div class="maincontents">
+
+          <h3 id="a">a題</h3>
+
+          <p class="lead">
+          </p>
+
+          <hr>
+
+          <h3 id="b">b題</h3>
+
+          <p>
+         </p>
+
+         <hr>
+
+         <h3 id="c">c題</h3>
+
+         <p>
+         </p>
+
+         <hr>
+
+         <h3 id="d">d題</h3>
+
+         <p>
+         </p>
+
+         <hr>
+
+         <h3 id="e">e題</h3>
+
+         <p>
+         </p>
+
+         <hr>
+
+         <h3 id="f">f題</h3>
+
+         <p>
+         </p>
+
+         <hr>
+
+        </div>
+      </div>
+    </main>
+
+
+
+    <footer>
+      <div class="footer-container">
+        <ol class="breadcrump">
+          <li><a href="about me.html">KAIKI Tsuda</a></li>
+          <li><a href="index.html">top page</a></li>
+          <li><a href="etc.html">etc</a></li>
+          <li>template</li>
+        </ol>
+      </div>
+    </footer>
+
+
+
+
+
+    <script type="text/javascript"src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+    $(function () {
+    var headerHight = 100;
+    $('a[href^=#]').click(function(){
+        var href= $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top-headerHight;
+        $("html, body").animate({scrollTop:position}, 550, "swing");
+        return false;
+      });
+    });
+
+    </script>
+
+  </body>
+
+</html>

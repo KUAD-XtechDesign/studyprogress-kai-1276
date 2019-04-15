@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>タイトル</title>
+    <link rel="stylesheet" href="stile1.css">
+
+    <style media="screen">
+    .main-container{
+      background-image: url(image/background-1.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: top;30px;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+    img .img{
+      width: 84px;
+      height: 63px;
+      position: fixed;
+      filter: brightness(-100%);
+    }
+    </style>
+  </head>
+
+
+
+  <body>
+
+    <header>
+      <div class="header-container">
+
+      </div>
+    </header>
+
+
+
+    <nav>
+      <div class="nav-container">
+        <ul>
+          <li class="top"><a href="index.html">top page-トップページ</a></li>
+          <li><a href="network1.html">network1-ソフトウェア・ネットワーク演習</a></li>
+          <li><a href="material1.html">material1-素材・材料学演習</a></li>
+          <li><a href="etc.html" class="current">etc-その他レポート等</a></li></li>
+          <li class="students"><a href="https://shira-ko.github.io/students2018/index.html">students-在学生一覧</a></li>
+        </ul>
+      </div>
+    </nav>
+
+
+
+    <main>
+      <div class="main-container">
+
+        <div class="sidebar">
+          <ul>
+            <li><a href="#a">a題</a></li>
+            <li><a href="#b">b題</a></li>
+            <li><a href="#c">c題</a></li>
+            <li><a href="#d">d題</a></li>
+            <li><a href="#e">e題</a></li>
+            <li><a href="#f">f題</a></li>
+          </ul>
+        </div>
+
+
+
+        <div class="sidebar2">
+          <iframe src="x-tech.html" width="260" height="400"></iframe>
+        </div>
+
+
+
+        <div class="maincontents">
+
+          <h3 id="a">ここは</h3>
+
+          <p class="lead">
+            テンプレート置き場兼レイアウトメモ。
+            <br>
+            「ぼくがかんがえたさいきょうのてんぷれーと」的なものを作る。
+            <br>
+            レイアウトはholy grail layout。
+            <br>
+            名前の響きが気に入ったのもあるが、当分は中身が増えてもレイアウトを変えなくて大丈夫なように、一番複雑で便利そうなのを選んだ。
+          </p>
+
+          <hr>
+
+          <h3 id="b">flexbox</h3>
+
+          <p>
+            <a href="template.html">これ</a>が第一弾。floatを使わずにflex boxのみで作った。
+            【2018.5.11~〇〇】まではこのテンプレートとstile1.cssで頑張ってた。
+            これでも本やら何やらを見る限りflortよりスッキリしてるらしい。が、多分要らないコードとかのせいも含めてごっちゃりしてる気がする。
+         </p>
+
+         <hr>
+
+         <h3 id="c">サイト</h3>
+
+         <p>
+           3カラムレイアウト部分に苦戦していた所、<a href="https://coliss.com/articles/build-websites/operation/css/flexbox-and-grid.html">こちら</a>
+           の記事を見つける。なるほど、確かに縦方向で切らず横方向のみ切るヘッダー&amp;ナビとフッターのレイアウトは苦労が無かった。
+         </p>
+
+         <hr>
+
+         <h3 id="d">css grid</h3>
+
+         <p>
+           と、言うわけで編集時（2018.8.5現在）頑張ってリンクを文字→ボックスにしてCSSグリッドレイアウトを導入しようとしている所。
+           <br>
+           <s>フロート？？知らんな</s>
+           <br>
+           あ、あと画面の伸縮に強くなりたい。
+         </p>
+
+         <hr>
+
+         <h3 id="e">試験</h3>
+
+         <p>
+           追記
+           <br>
+           試験的にグリッドのみで作ってみた。
+           <br>
+           <a href="test.html">こんな</a>感じになった。コンテンツの量で解決は出来るが、デフォルトでフッターが最下部に付くよう改善したい。
+         </p>
+
+         <hr>
+
+         <h3 id="f">背景</h3>
+
+         <p>
+           背景について。
+           <br>
+           <img src="image/background-material0.jpg" alt="" class="img">
+           <br>
+           material1
+           <br>
+           <img src="image/background-network0.jpg" alt="" class="img">
+           <br>
+           Network1
+           <br>
+           <img src="image/background-0.jpg" alt="" class="img">
+           <br>
+           etc
+           <br>
+           そのうち自分で描こうと思う。
+         </p>
+
+         <hr>
+
+        </div>
+      </div>
+    </main>
+
+
+
+    <footer>
+      <div class="footer-container">
+        <ol class="breadcrump">
+          <li><a href="about me.html">KAIKI Tsuda</a></li>
+          <li><a href="index.html">top page</a></li>
+          <li><a href="etc.html">etc</a></li>
+          <li>upgrade</li>
+        </ol>
+      </div>
+    </footer>
+
+
+    <script type="text/javascript"src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+    $(function () {
+    var headerHight = 100;
+    $('a[href^=#]').click(function(){
+        var href= $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top-headerHight;
+        $("html, body").animate({scrollTop:position}, 550, "swing");
+        return false;
+      });
+    });
+
+    </script>
+
+  </body>
+
+</html>

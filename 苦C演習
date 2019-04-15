@@ -1,0 +1,6 @@
+$ vim test.c
+
+int main(void)
+{
+  return0;
+}

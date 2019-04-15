@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>golden week</title>
+    <link rel="stylesheet" href="stile1.css">
+    <style media="screen">
+    .main-container{
+      background-image: url(image/background-1.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: top;30px;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+    </style>
+  </head>
+
+
+
+
+  <body>
+
+    <header>
+      <div class="header-container">
+
+      </div>
+    </header>
+
+    <nav>
+      <div class="nav-container">
+        <ul>
+          <li class="top"><a href="index.html">top page-トップページ</a></li>
+          <li><a href="network1.html">network1-ソフトウェア・ネットワーク演習</a></li>
+          <li><a href="material1.html">material1-素材・材料学演習</a></li>
+          <li><a href="etc.html" class="current">etc-その他レポート等</a></li></li>
+          <li class="students"><a href="https://shira-ko.github.io/students2018/index.html">students-在学生一覧</a></li>
+        </ul>
+      </div>
+    </nav>
+
+
+
+    <main>
+      <div class="main-container">
+
+        <div class="sidebar">
+
+        </div>
+
+
+
+        <div class="sidebar2">
+          <iframe src="x-tech.html" width="260" height="650px"></iframe>
+        </div>
+
+
+
+        <div class="maincontents">
+
+          <p>帰ってすぐに、入学祝いをくれた親戚と知り合いの家を訪ねて回った。日課にワン公の散歩が加わった <br>
+            親父にPCの相談をしようと部屋を訪ねたら自作PCがまた進化してた。その機械系のセンスを<s>機械音痴</s>電子的な機微に疎い私にカケラでも分けて欲しい <br>
+            私のPCがクリーンインストール中で使えない間、姉にスマホの使い方や便利なアプリを教わっていた。その機械系の（略 <br>
+            神社に行ったらおみくじが自販機で売ってあった。そして何故か大吉 <br>
+            サッカーを見に行ったら負け試合だった。次の日野球を見に隣の県まで行ったらまた負け試合だった… <br>
+            そして京都に帰って来たらクラスメイトがなんかわけわからんサイトとアプリ開いて頭良さそうな事してた。その（ry</p>
+
+            <p>
+              新しく挑戦して見たことといえば。
+              <br>
+              スマホを使い始めた。WALKMANがずっと不調だったからなのだが。
+              <br>
+              絶対中毒になる自信があったので避けていたのだが、使いこなせれば便利な事に変わりはないので使い始める。
+              <br>
+              とは言っても現段階では使い始めたというか持ち歩き始めた、といったところなのだが。ミュージックプレーヤーと迷子防止として。
+            </p>
+
+        </div>
+      </div>
+    </main>
+
+
+
+    <footer>
+      <div class="footer-container">
+        <ol class="breadcrump">
+          <li><a href="about me.html">KAIKI Tsuda</a></li>
+          <li><a href="index.html">top page</a></li>
+          <li><a href="etc.html">etc</a></li>
+          <li>golden week</li>
+        </ol>
+      </div>
+    </footer>
+
+
+
+    <script type="text/javascript"src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+    $(function () {
+    var headerHight = 100;
+    $('a[href^=#]').click(function(){
+        var href= $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top-headerHight;
+        $("html, body").animate({scrollTop:position}, 550, "swing");
+        return false;
+      });
+    });
+
+    </script>
+
+  </body>
+
+</html>

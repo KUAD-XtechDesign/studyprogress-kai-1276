@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>etc</title>
+    <link rel="stylesheet" href="stile-nav.css">
+    <style media="screen">
+    .main-container{
+      background-image: url(image/background-1.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: top;30px;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+    </style>
+  </head>
+
+
+
+  <body>
+    <header>
+      <div class="heder-container">
+        <a href="https://www.kyoto-art.ac.jp/art/department/infodesign/x-techdesign/"><h1 class="logo">X-tech</h1></a>
+      </div>
+    </header>
+
+
+
+    <nav>
+      <div class="nav-container">
+        <ul>
+          <li class="top"><a href="index.html">top page-トップページ</a></li>
+          <li><a href="network1.html">network1-ソフトウェア・ネットワーク演習</a></li>
+          <li><a href="material1.html">material1-素材・材料学演習</a></li>
+          <li><a href="etc.html" class="current">etc-その他レポート等</a></li></li>
+          <li class="students"><a href="https://shira-ko.github.io/students2018/index.html">students-在学生一覧</a></li>
+        </ul>
+      </div>
+    </nav>
+
+
+
+    <main>
+      <div class="main-container">
+
+        <div class="sidebar">
+          <iframe src="x-tech.html" width="260" height="500"></iframe>
+        </div>
+
+
+
+        <div class="maincontents">
+          <h1>etc---その他</h1>
+          <p>その他レポート。課題以外にも気が向いたときに筆を取ったものや、試験で作ったWebページもここに分類する。分類に困るようなものは基本ココ。</p>
+
+          <ul class="links">
+            <li>
+              <a href="about me.html">
+                <div class="linkbox">
+                  <img src="image/2018-mindmap.jpg" alt=""width="276" height="207" class="linkimg">
+                  <p class="linktxt">about me<br>about me-自己紹介</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="golden week.html">
+                <div class="linkbox">
+                  <img src="image/no image.png" alt=""width="276" height="207" class="linkimg">
+                  <p class="linktxt">golden week<br>golden week-ゴールデンウィーク</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="upgrade.html">
+                <div class="linkbox">
+                  <img src="image/code.png" alt=""width="276" height="207" class="linkimg">
+                  <p class="linktxt">layout<br>レイアウトについて</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="toy box.html">
+                <div class="linkbox">
+                  <img src="image/no image.png" alt=""width="276" height="207" class="linkimg">
+                  <p class="linktxt">toy box<br>toy box-実験場</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="11827025_tsuda.pdf" download="11827025_tsuda.pdf">
+                <div class="linkbox">
+                  <img src="image/no image.png" alt="" class="linkimg">
+                  <p class="linktxt">4 years later<br>4 years later-四年後の社会を考える</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </main>
+
+
+
+    <footer>
+      <div class="footer-container">
+        <ol class="breadcrump">
+          <li><a href="about me.html">KAIKI Tsuda</a></li>
+          <li><a href="index.html">top page</a></li>
+          <li>etc</li>
+        </ol>
+      </div>
+    </footer>
+
+
+
+
+
+    <script type="text/javascript"src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+    $(function () {
+    var headerHight = 100;
+    $('a[href^=#]').click(function(){
+        var href= $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top-headerHight;
+        $("html, body").animate({scrollTop:position}, 550, "swing");
+        return false;
+      });
+    });
+
+    </script>
+
+  </body>
+
+</html>
