@@ -146,6 +146,11 @@ p{
   background: #0000ff;
 }
 
+img{
+  max-width: 640px;
+  height: auto;
+}
+
 a{
   text-decoration: none;
 }
