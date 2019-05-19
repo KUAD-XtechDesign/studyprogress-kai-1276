@@ -8,10 +8,10 @@ body{
   grid-template-columns: 180px 1fr 270px;
   grid-template-rows: 120px 65px 1fr 20px;
   grid-template-areas:
-  " header  header   header"
-  " nav     nav      nav   "
-  " Lside   main     Rside "
-  " footer  footer   footer";
+  "header  header   header"
+  "nav     nav      nav   "
+  "Lside   main     Rside "
+  "footer  footer   footer";
 }
 
 
@@ -21,9 +21,10 @@ header{
 }
 
 
-
-nav{
+.nav{
   grid-area: nav;
+}
+nav{
   position: -webkit-sticky;
   left: 0;
   top: 0;
